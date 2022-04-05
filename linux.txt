@@ -14,7 +14,7 @@ ls -a-показывает скрытые файлы
 mv 123 321- изменение имени папки 
 mv -i - интерактивная опция
 7)cp имя_файла путь(куда надо)-копирование файла
-cp -r-рекурсивное копирование
+cp -r-рекурсивное копирование(все содержимое скопирует)
 cp -i-копирование ,если такая папка уже есть,то ПО спросит надо ли перезаписать
 cp /tmp/xfiles . -копирует файл в текущую директорию
 cp /root/file-
@@ -59,8 +59,63 @@ mv [source] [destination]
 32)cat/passwd-видим какие пользователи есть
 33) sudo cat etc/shadow-посмотреть пароли
 34)cat /etc/group-просмотр групп
---------------
-CTRL+C-kill command
+35)java -jar stegsolve.jar-открытие stegsolve
+36)exiftool имя_файла-полностью показывает инфу вайла 
+37)strings | gret flag название файла- ищет по ключевым словам слово "flag"
+38)sudo apt-update -скачивание пакетов
+39)sudo apt-upgrade-обновление пакетов
+40)dpkg -l -узнать версии устаревших приложении
+41)dpkg -i package.deb-установление пакета
+42)dpkg -r package.deb-удаление пакета
+43)sudo apt install <название пакета>-установка пакета
+44)sudo apt-cache search- Search for package
+45)sudo apt-cache show-show information about package
+46)sudo apt-get remove-remove package
+47)sudo apt-get purge-Remove package and configs
+48)tar c-Create archive(создание)
+49)tar r-Append to archive(добавление в существующий)
+50)tar t-List contents of archive(просмотр архива)
+51)tar x-Extract archive(распаковка)
+52)tar v-Verbose(расширенный режим)
+53)tar f file-File to use(указание имени в нужный файл)
+54)gzip-classic compression in Linux
+55)bzip2-More compression than gzip but more time to compress
+56)file somefile-Determines format of file
+57)apropos keyword-Commands whose one line descriptions contains the keyword
+58)man -k
+--h\--help
+Create tar from files:
+tar cvf archive.tar file1 file2 dir1 dir2
+List content of archive:
+tar tvf archive.tar
+Add to file or dir to archive:
+tar rvf archive.tar file3
+tar rvf archive.tar di3 
+Exctract file or directory:
+tar xvf archive.tar file3
+tar xvf arcive.tar der3/subdir3
+Exctract archive 
+tar xvf archive.tar
+Extract in a different directory:
+tar xvf archive.tar -C /tmp/extracted
+Compress:
+tar zcvf compressed.tar.gz file1 file2
+tar jcvf compressed.tar.bz2 file1 file2
+List:
+tar ztvf compressed.tar.gz
+tar jtvf compressed.tar.bz2
+Extract File or directory:
+tar zxvf compressed.tar.gz file1
+tar jxvf compressed.tar.bz2 file1
+XVIIISpecial symbols:
+*- Matches zero or all characters(показывает отсутствие или все символыв сразу,выделяет ВСЕ файлы)
+?-Matches exactly one character(соответствуйте одному знаку)
+[]-Matches any of the characters enclosed in the brackets(соответсвует всем символам заключенных в скобки)
+\-Escape character(исключение символа)
+examples:
+tar cf backup.tar *-добавление всех директории и файлов в архив
+-------------- 
+CTRL+C-kill command 
 Ctrl+z-stop
 fg-foreground job
 clear-очистка консоли
@@ -112,3 +167,21 @@ sudo chmod 1777 qu1- добавление стикибита
 sudo apt update
 
 sudo apt install
+
+
+
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+II
+
+1)nslokup <название сайта> -узнать ДНС-сервер
+TLD-top level domain(все что написано после .)
+generic top level domain(не привязано к стране edu-education,com-комерческие веб-асйты,ai-орган связ с искусст интеллектом)
+country code top level domain-привязанные к стране(ru,us,uk)
+
+типы запросов:
+1)рекурсивный(ip-адрес сайта)
+2)iterative(ip-адрес сайта или авторитатирвный DNS сервер)
+3)inverse(обратный- с айпи на доменное имя)
